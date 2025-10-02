@@ -51,15 +51,15 @@ export default function Home() {
               </p>
               
               <div className="grid md:grid-cols-2 gap-8 mt-12">
-                <div className="bg-white rounded-lg shadow-lg p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-gray-900">Drawing and Spec production.</h3>
+                <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                  <h3 className="text-2xl font-semibold mb-4 text-gray-900">Drawing and Spec production</h3>
                   <p className="text-gray-600">
                     Outsource your labor-intensive production work to our curated network of production facilities in China.
                   </p>
                 </div>
                 
-                <div className="bg-white rounded-lg shadow-lg p-8">
-                  <h3 className="text-2xl font-semibold mb-4 text-gray-900">AI-powered Contracts solution.</h3>
+                <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                  <h3 className="text-2xl font-semibold mb-4 text-gray-900">AI-powered Contracts solution</h3>
                   <p className="text-gray-600">
                     Through our partnership with Docgility, we help you identify contractual risks and produce finalized agreements.
                   </p>

@@ -148,6 +148,7 @@ export default function Contact() {
                         id="name"
                         name="name"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your full name"
                         required
                       />
                     </div>
@@ -161,6 +162,7 @@ export default function Contact() {
                         id="email"
                         name="email"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="your.email@example.com"
                         required
                       />
                     </div>
@@ -174,6 +176,7 @@ export default function Contact() {
                         id="company"
                         name="company"
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                        placeholder="Your company name"
                       />
                     </div>
                     

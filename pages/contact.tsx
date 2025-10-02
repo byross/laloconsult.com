@@ -10,7 +10,6 @@ export default function Contact() {
         <meta name="description" content="聯絡 Lalo Consult 獲取專業建築外包和AI合約解決方案服務" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
       </Head>
       
       <main className="min-h-screen bg-gray-50 font-montserrat">

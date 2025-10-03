@@ -16,7 +16,7 @@ export default function Footer() {
               className="underline hover:no-underline"
               style={{ color: '#aaaaaa' }}
             >
-              byRoss Design & Tech
+              byRoss Design & Tech.
             </a>
           </p>
         </div>

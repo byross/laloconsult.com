@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 export default function About() {
   const router = useRouter()
@@ -24,6 +25,7 @@ export default function About() {
         <div className="text-center">
           <p className="text-muted-foreground">Redirecting...</p>
         </div>
+        <Footer />
       </div>
     </>
   )

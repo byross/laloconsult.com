@@ -2,6 +2,7 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 export default function Home() {
   return (
@@ -17,7 +18,7 @@ export default function Home() {
         <Navigation />
 
         {/* Hero Section - Simple and Clean */}
-        <section className="py-20 md:py-32 bg-secondary">
+        <section className="pt-24 pb-20 md:pt-32 md:pb-32 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-secondary-foreground mb-8 leading-tight">
@@ -50,6 +51,7 @@ export default function Home() {
           </div>
         </section>
 
+        <Footer />
       </div>
     </>
   )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 export default function ContractsEditing() {
   const [showVideo, setShowVideo] = useState(false)
@@ -26,7 +27,7 @@ export default function ContractsEditing() {
         <Navigation />
 
         {/* Main Content with Burgundy Background */}
-        <div className="py-16 md:py-24">
+        <div className="pt-24 pb-16 md:pt-32 md:pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-12">
               
@@ -60,21 +61,17 @@ export default function ContractsEditing() {
 
                 {/* Docgility Platform Screenshot - Clickable to play video */}
                 <div className="mt-8 cursor-pointer group" onClick={handleVideoClick}>
-                  <div className="relative bg-gray-900 rounded-lg overflow-hidden aspect-video">
+                  <div className="relative rounded-lg overflow-hidden aspect-video">
+                    <img 
+                      src="/video/Docgility_cover.jpg" 
+                      alt="Docgility Platform Preview" 
+                      className="w-full h-full object-cover"
+                    />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                      <div className="w-20 h-20 bg-white/40 rounded-full flex items-center justify-center group-hover:bg-white/50 transition-colors">
                         <svg className="w-10 h-10 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
                           <path d="M8 5v14l11-7z" />
                         </svg>
-                      </div>
-                    </div>
-                    <div className="p-6 text-white">
-                      <div className="text-2xl font-bold mb-4">DOCGILITY</div>
-                      <div className="space-y-2 text-sm opacity-75">
-                        <p>• Design Management and Construction Management Services Agreement</p>
-                        <p>• Risk identification and analysis</p>
-                        <p>• AI-powered contract review</p>
-                        <p>• Multi-language support</p>
                       </div>
                     </div>
                   </div>
@@ -109,6 +106,7 @@ export default function ContractsEditing() {
                   autoPlay
                   className="w-full h-full"
                   onEnded={handleVideoClose}
+                  poster="/video/Docgility_cover.jpg"
                 >
                   <source src="/video/Docgility.mp4" type="video/mp4" />
                   Your browser does not support the video tag.
@@ -117,6 +115,8 @@ export default function ContractsEditing() {
             </div>
           </div>
         )}
+        
+        <Footer />
       </div>
     </>
   )

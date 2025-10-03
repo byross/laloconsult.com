@@ -34,9 +34,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       
       {children}
       
-      <footer className="bg-gray-800 text-white py-8">
+      <footer className="py-8" style={{ backgroundColor: '#6D0E25' }}>
         <div className="container mx-auto px-4 text-center">
-          <p>&copy; 2024 Lalo Consult. 版權所有。</p>
+          <p className="text-white">
+            © Copyright LaLo Consult. Powered by Ross Design and Tech.
+          </p>
         </div>
       </footer>
     </>

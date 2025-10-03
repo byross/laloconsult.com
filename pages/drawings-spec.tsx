@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Head from 'next/head'
 import Navigation from '../components/Navigation'
+import Footer from '../components/Footer'
 
 export default function DrawingsSpec() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null)
@@ -26,7 +27,7 @@ export default function DrawingsSpec() {
         <Navigation />
 
         {/* Main Content with Burgundy Background */}
-        <div className="py-16 md:py-24">
+        <div className="pt-24 pb-16 md:pt-32 md:pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-12">
               
@@ -138,6 +139,8 @@ export default function DrawingsSpec() {
             </div>
           </div>
         )}
+        
+        <Footer />
       </div>
     </>
   )

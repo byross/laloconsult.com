@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import '../styles/globals.css'
 
 export default function _app({ Component, pageProps }: { Component: any, pageProps: any }) {
   return (

@@ -14,339 +14,582 @@ export default function Home() {
           * {
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            border: none;
+            outline: none;
+            box-shadow: none;
+          }
+          
+          html {
+            scroll-behavior: smooth;
           }
           
           body {
             font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #374151;
-            background-color: #f9fafb;
+            font-weight: 400;
+            line-height: 28px;
+            font-size: 16px;
+            color: #2C2C2C;
+            background: #E8E8E8;
+            --primary-color: #E1B78C;
+            --heading-color: #FFFFFF;
+            --secondary-color: #141414;
+            --black-120: #101010;
+            --black-110: #121212;
+            --black-100: #141414;
+            --black-90: #2C2C2C;
+            --black-80: #434343;
+            --black-70: #5B5B5B;
+            --black-60: #727272;
+            --black-50: #8A8A8A;
+            --black-40: #a1a1a1;
+            --black-30: #B9B9B9;
+            --black-20: #d0d0d0;
+            --black-10: #E8E8E8;
+            --border-color: #D9DFE7;
           }
           
           .container {
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 1rem;
           }
           
-          .nav {
-            background: white;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            border-bottom: 1px solid #e5e7eb;
-            height: 80px;
+          /* Header Styles */
+          .main-header {
+            position: relative;
+            z-index: 999;
+          }
+          
+          .header-upper {
+            background: #101010;
+            padding: 20px 0;
+            position: relative;
+          }
+          
+          .header-inner {
             display: flex;
             align-items: center;
             justify-content: space-between;
+            width: 100%;
           }
           
-          .nav-brand {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #111827;
+          .logo a {
+            font-size: 2rem;
+            font-weight: 900;
+            color: #E1B78C;
             text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
           }
           
-          .nav-links {
+          .nav-outer {
+            flex: 1;
             display: flex;
-            gap: 2rem;
+            justify-content: center;
           }
           
-          .nav-link {
-            color: #374151;
+          .main-menu {
+            display: flex;
+            align-items: center;
+          }
+          
+          .navigation {
+            display: flex;
+            list-style: none;
+            gap: 3rem;
+            margin: 0;
+            padding: 0;
+          }
+          
+          .navigation li {
+            position: relative;
+          }
+          
+          .navigation a {
+            color: #FFFFFF;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
           }
           
-          .nav-link:hover {
-            color: #2563eb;
+          .navigation a:hover {
+            color: #E1B78C;
           }
           
-          .hero {
-            background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
-            padding: 5rem 0;
-            text-align: center;
+          .search-btns {
+            margin-left: 2rem;
           }
           
-          .hero h1 {
-            font-size: 3.5rem;
-            font-weight: bold;
-            color: #111827;
+          .search-icon {
+            color: #FFFFFF;
+            font-size: 18px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+          }
+          
+          .search-icon:hover {
+            color: #E1B78C;
+          }
+          
+          /* Hero Section */
+          .hero-area {
+            background: #FFFFFF;
+            padding: 80px 0 100px;
+            position: relative;
+          }
+          
+          .hero-content {
+            display: flex;
+            align-items: center;
+            min-height: 600px;
+          }
+          
+          .hero-left {
+            flex: 0 0 200px;
+            position: relative;
+          }
+          
+          .rotate-hero {
+            color: #141414;
+            font-size: 120px;
+            font-weight: 900;
+            text-transform: uppercase;
+            transform: rotate(-90deg);
+            transform-origin: center;
+            position: absolute;
+            left: -50px;
+            top: 50%;
+            white-space: nowrap;
+            text-shadow: 2px 0 #141414;
+            letter-spacing: -5px;
+          }
+          
+          .hero-right {
+            flex: 1;
+            margin-left: 100px;
+          }
+          
+          .hero-main-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+          }
+          
+          .hero-text {
+            flex: 1;
+          }
+          
+          .hero-text h6 {
+            color: #2C2C2C;
+            font-size: 24px;
+            font-weight: 600;
+            line-height: 1.4;
             margin-bottom: 2rem;
-            line-height: 1.2;
           }
           
-          .hero p {
-            font-size: 1.25rem;
-            color: #4b5563;
-            margin-bottom: 3rem;
-            max-width: 64rem;
-            margin-left: auto;
-            margin-right: auto;
+          .hero-btn {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: #141414;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid #141414;
+            padding: 16px 32px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
           }
           
-          .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            max-width: 80rem;
-            margin: 0 auto;
+          .hero-btn:hover {
+            background: #141414;
+            color: #FFFFFF;
           }
           
-          .card {
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            padding: 2rem;
-            transition: all 0.3s;
-            transform: translateY(0);
+          .hero-btn .btn-icon {
+            margin-left: 12px;
+            display: flex;
+            align-items: center;
           }
           
-          .card:hover {
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-            transform: translateY(-4px);
-          }
-          
-          .card-icon {
-            width: 4rem;
-            height: 4rem;
-            border-radius: 50%;
+          .hero-image {
+            flex: 0 0 500px;
+            height: 500px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1.5rem;
+            position: relative;
+            overflow: hidden;
           }
           
-          .card-icon.blue {
-            background-color: #dbeafe;
-            color: #2563eb;
+          .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="%23ddd" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.3;
           }
           
-          .card-icon.green {
-            background-color: #dcfce7;
-            color: #16a34a;
+          .hero-placeholder {
+            color: #8A8A8A;
+            font-size: 18px;
+            font-weight: 500;
+            text-align: center;
+            z-index: 1;
+            position: relative;
           }
           
-          .card h3 {
-            font-size: 1.5rem;
+          /* About Section */
+          .about-area {
+            background: #E8E8E8;
+            padding: 100px 0;
+          }
+          
+          .about-content {
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+            min-height: 400px;
+          }
+          
+          .about-text {
+            flex: 1;
+          }
+          
+          .about-text h4 {
+            color: #141414;
+            font-size: 18px;
             font-weight: 600;
-            color: #111827;
-            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
           }
           
-          .card p {
-            color: #4b5563;
+          .about-text p {
+            color: #2C2C2C;
+            font-size: 16px;
             line-height: 1.7;
+            margin-bottom: 1.5rem;
           }
           
-          .highlight-box {
-            background: white;
-            border-radius: 1rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            padding: 2rem;
-            max-width: 64rem;
-            margin: 4rem auto 0;
+          .about-image {
+            flex: 0 0 400px;
+            height: 300px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
           }
           
-          .highlight-box p {
-            font-size: 1.125rem;
-            color: #374151;
-            line-height: 1.7;
+          .about-placeholder {
+            color: #8A8A8A;
+            font-size: 16px;
+            font-weight: 500;
           }
           
-          .section {
-            padding: 5rem 0;
-          }
-          
-          .section.white {
-            background: white;
-          }
-          
-          .section.gray {
-            background: #f9fafb;
+          /* Services Section */
+          .service-area {
+            background: #141414;
+            padding: 100px 0;
+            color: #FFFFFF;
           }
           
           .section-title {
-            text-align: center;
+            text-align: left;
             margin-bottom: 4rem;
           }
           
           .section-title h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #111827;
-            margin-bottom: 1.5rem;
-          }
-          
-          .section-title .divider {
-            width: 6rem;
-            height: 0.25rem;
-            background: #2563eb;
-            border-radius: 9999px;
-            margin: 0 auto;
+            color: #FFFFFF;
+            font-size: 80px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -3px;
+            line-height: 1;
+            text-shadow: 2px 0 #FFFFFF;
           }
           
           .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 4rem;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
           }
           
           .service-card {
-            background: #f9fafb;
-            border-radius: 1rem;
-            padding: 2rem;
+            background: transparent;
+            border: 1px solid #2C2C2C;
+            padding: 3rem;
+            transition: all 0.3s ease;
+          }
+          
+          .service-card:hover {
+            border-color: #E1B78C;
+            transform: translateY(-5px);
           }
           
           .service-card h3 {
-            font-size: 1.875rem;
+            color: #E1B78C;
+            font-size: 24px;
             font-weight: 600;
-            color: #111827;
             margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
           }
           
           .service-item {
-            background: white;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #2C2C2C;
+            padding-bottom: 1.5rem;
+          }
+          
+          .service-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
           }
           
           .service-item h4 {
-            font-size: 1.25rem;
+            color: #FFFFFF;
+            font-size: 18px;
             font-weight: 600;
-            color: #1f2937;
-            margin-bottom: 0.75rem;
+            margin-bottom: 1rem;
           }
           
           .service-item p {
-            color: #4b5563;
+            color: #B9B9B9;
             line-height: 1.7;
+            font-size: 15px;
+          }
+          
+          /* Capabilities Section */
+          .capabilities-area {
+            background: #E8E8E8;
+            padding: 100px 0;
+          }
+          
+          .capabilities-title {
+            text-align: center;
+            margin-bottom: 4rem;
+          }
+          
+          .capabilities-title h2 {
+            color: #141414;
+            font-size: 60px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1;
+            text-shadow: 2px 0 #141414;
           }
           
           .capabilities-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 2rem;
           }
           
           .capability-card {
-            background: white;
-            border-radius: 0.75rem;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-            transition: box-shadow 0.3s;
+            background: #FFFFFF;
+            border: 1px solid #d0d0d0;
+            padding: 2.5rem;
+            transition: all 0.3s ease;
+            position: relative;
           }
           
           .capability-card:hover {
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+            border-color: #E1B78C;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
           }
           
           .capability-icon {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 0.5rem;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            font-size: 24px;
           }
           
-          .capability-icon.blue { background-color: #dbeafe; color: #2563eb; }
-          .capability-icon.green { background-color: #dcfce7; color: #16a34a; }
-          .capability-icon.purple { background-color: #e9d5ff; color: #9333ea; }
-          .capability-icon.orange { background-color: #fed7aa; color: #ea580c; }
-          .capability-icon.red { background-color: #fecaca; color: #dc2626; }
-          .capability-icon.indigo { background-color: #c7d2fe; color: #4f46e5; }
+          .capability-icon.blue { background: #dbeafe; color: #2563eb; }
+          .capability-icon.green { background: #dcfce7; color: #16a34a; }
+          .capability-icon.purple { background: #e9d5ff; color: #9333ea; }
+          .capability-icon.orange { background: #fed7aa; color: #ea580c; }
+          .capability-icon.red { background: #fecaca; color: #dc2626; }
+          .capability-icon.indigo { background: #c7d2fe; color: #4f46e5; }
           
           .capability-card h3 {
-            font-size: 1.125rem;
+            color: #141414;
+            font-size: 18px;
             font-weight: 600;
-            color: #111827;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
           }
           
           .capability-card p {
-            color: #4b5563;
+            color: #2C2C2C;
+            font-size: 15px;
+            line-height: 1.6;
           }
           
-          .cta {
-            background: linear-gradient(90deg, #2563eb 0%, #4f46e5 100%);
-            padding: 5rem 0;
+          /* CTA Section */
+          .cta-area {
+            background: #141414;
+            padding: 100px 0;
             text-align: center;
-            color: white;
+            color: #FFFFFF;
           }
           
-          .cta h2 {
-            font-size: 2.5rem;
-            font-weight: bold;
-            margin-bottom: 1.5rem;
-          }
-          
-          .cta p {
-            font-size: 1.25rem;
-            color: #bfdbfe;
+          .cta-content h2 {
+            color: #FFFFFF;
+            font-size: 50px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+            line-height: 1.2;
             margin-bottom: 2rem;
-            max-width: 48rem;
+            text-shadow: 2px 0 #FFFFFF;
+          }
+          
+          .cta-content p {
+            color: #B9B9B9;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 3rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
           }
           
           .cta-button {
-            display: inline-block;
-            background: white;
-            color: #2563eb;
-            padding: 1rem 2rem;
-            border-radius: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            background: #E1B78C;
+            color: #141414;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1.125rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
-            transition: all 0.3s;
-            transform: translateY(0);
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 20px 40px;
+            transition: all 0.3s ease;
+            border: 2px solid #E1B78C;
           }
           
           .cta-button:hover {
-            background: #f9fafb;
-            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
-            transform: translateY(-4px);
+            background: transparent;
+            color: #E1B78C;
           }
           
+          /* Footer */
           .footer {
-            background: #111827;
-            color: white;
-            padding: 3rem 0;
+            background: #101010;
+            color: #FFFFFF;
+            padding: 60px 0;
             text-align: center;
           }
           
           .footer h3 {
-            font-size: 1.5rem;
-            font-weight: bold;
+            color: #E1B78C;
+            font-size: 24px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             margin-bottom: 1rem;
           }
           
           .footer p {
-            color: #9ca3af;
-            margin-bottom: 1rem;
+            color: #B9B9B9;
+            margin-bottom: 0.5rem;
           }
           
           .footer .copyright {
-            color: #6b7280;
+            color: #727272;
+            font-size: 14px;
+          }
+          
+          /* Responsive Design */
+          @media (max-width: 1200px) {
+            .rotate-hero {
+              font-size: 80px;
+              left: -30px;
+            }
+            
+            .section-title h2 {
+              font-size: 60px;
+            }
+            
+            .capabilities-title h2 {
+              font-size: 50px;
+            }
+            
+            .cta-content h2 {
+              font-size: 40px;
+            }
           }
           
           @media (max-width: 768px) {
-            .nav-links {
+            .navigation {
               display: none;
             }
             
-            .hero h1 {
-              font-size: 2.5rem;
+            .hero-content {
+              flex-direction: column;
+              text-align: center;
             }
             
-            .cards {
-              grid-template-columns: 1fr;
+            .hero-left {
+              flex: none;
+              margin-bottom: 2rem;
+            }
+            
+            .rotate-hero {
+              position: static;
+              transform: none;
+              font-size: 40px;
+              margin-bottom: 1rem;
+            }
+            
+            .hero-main-content {
+              flex-direction: column;
+              gap: 2rem;
+            }
+            
+            .hero-image {
+              flex: none;
+              width: 100%;
+              max-width: 400px;
+              height: 300px;
+            }
+            
+            .about-content {
+              flex-direction: column;
+              gap: 2rem;
+            }
+            
+            .about-image {
+              flex: none;
+              width: 100%;
+              max-width: 400px;
+              height: 250px;
             }
             
             .services-grid {
@@ -354,137 +597,145 @@ export default function Home() {
             }
             
             .capabilities-grid {
-              grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+              grid-template-columns: 1fr;
+            }
+            
+            .section-title h2,
+            .capabilities-title h2,
+            .cta-content h2 {
+              font-size: 40px;
             }
           }
         `}</style>
       </Head>
       
       <main>
-        {/* Navigation */}
-        <nav className="nav">
-          <div className="container">
-            <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', width: '100%' }}>
-              <Link href="/" className="nav-brand">
-                Lalo Consult
-              </Link>
-              
-              <div className="nav-links">
-                <Link href="/" className="nav-link">
-                  About us
-                </Link>
-                <Link href="/drawings-spec" className="nav-link">
-                  Drawings and Spec
-                </Link>
-                <Link href="/contracts-editing" className="nav-link">
-                  Contracts editing
-                </Link>
-                <Link href="/contact" className="nav-link">
-                  Contact us
-                </Link>
+        {/* Header */}
+        <header className="main-header">
+          <div className="header-upper">
+            <div className="container">
+              <div className="header-inner">
+                <div className="logo">
+                  <Link href="/">
+                    Lalo Consult
+                  </Link>
+                </div>
+                
+                <div className="nav-outer">
+                  <nav className="main-menu">
+                    <ul className="navigation">
+                      <li><Link href="/">Home</Link></li>
+                      <li><Link href="/">About</Link></li>
+                      <li><Link href="/drawings-spec">Drawings</Link></li>
+                      <li><Link href="/contracts-editing">Contracts</Link></li>
+                      <li><Link href="/contact">Contact</Link></li>
+                    </ul>
+                  </nav>
+                </div>
+                
+                <div className="search-btns">
+                  <span className="search-icon">🔍</span>
+                </div>
               </div>
             </div>
           </div>
-        </nav>
+        </header>
 
         {/* Hero Section */}
-        <section className="hero">
+        <section className="hero-area">
           <div className="container">
-            <h1>We are New York registered architects</h1>
-            <p>
-              Specializing in architectural detailing and specifications. We help architectural/ interior design firms worldwide in two aspects:
-            </p>
-            
-            <div className="cards">
-              <div className="card">
-                <div className="card-icon blue">
-                  <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
+            <div className="hero-content">
+              <div className="hero-left">
+                <h1 className="rotate-hero">Design</h1>
+              </div>
+              
+              <div className="hero-right">
+                <div className="hero-main-content">
+                  <div className="hero-text">
+                    <h6>We are New York registered architects specializing in architectural detailing and specifications</h6>
+                    <Link href="/contact" className="hero-btn">
+                      Get Started
+                      <span className="btn-icon">→</span>
+                    </Link>
+                  </div>
+                  
+                  <div className="hero-image">
+                    <div className="hero-placeholder">
+                      Architecture Excellence
+                    </div>
+                  </div>
                 </div>
-                <h3>Drawing and Spec production</h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="about-area">
+          <div className="container">
+            <div className="about-content">
+              <div className="about-text">
+                <h4>Who We Are</h4>
                 <p>
-                  Outsource your labor-intensive production work to our curated network of production facilities in China.
+                  We help architectural and interior design firms worldwide in two key aspects: 
+                  Drawing and Spec production, and AI-powered Contracts solutions.
+                </p>
+                <p>
+                  In other words, we are a just-in-time resource focusing on the non-creative aspect of your business, 
+                  freeing you to focus on innovative design and client relationships.
                 </p>
               </div>
               
-              <div className="card">
-                <div className="card-icon green">
-                  <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
+              <div className="about-image">
+                <div className="about-placeholder">
+                  Professional Services
                 </div>
-                <h3>AI-powered Contracts solution</h3>
-                <p>
-                  Through our partnership with Docgility, we help you identify contractual risks and produce finalized agreements.
-                </p>
               </div>
-            </div>
-            
-            <div className="highlight-box">
-              <p>
-                In other words, we are a just-in-time resource focusing on the non-creative aspect of your business, 
-                freeing you to focus on innovative design and client relationships.
-              </p>
             </div>
           </div>
         </section>
 
         {/* Services Section */}
-        <section className="section white">
+        <section className="service-area">
           <div className="container">
             <div className="section-title">
-              <h2>Our Specialized Services</h2>
-              <div className="divider"></div>
+              <h2>Our Services</h2>
             </div>
             
             <div className="services-grid">
-              {/* Drawing and Spec */}
-              <div>
-                <div className="service-card">
-                  <h3>Drawing and Spec production</h3>
-                  
-                  <div className="service-item">
-                    <h4>Working Drawing production</h4>
-                    <p>
-                      Outsource your labor-intensive production work to our curated network of production facilities in China. 
-                      We act as the single-source coordinator, so you do not deal with language and cultural barriers. 
-                      We deliver to you drawing packages that adhere to American (Imperial) or European (Metric) conventions. 
-                      Our output will be in English and will match your style and terminologies.
-                    </p>
-                  </div>
-                  
-                  <div className="service-item">
-                    <h4>Building products research and spec</h4>
-                    <p>
-                      We research on building materials and then generate an Outline Spec based on the research. 
-                      China offers an extensive catalog of unique building products that can provide your clients with 
-                      distinctive alternatives and potential cost savings. We serve as your dedicated gateway to this valuable resource.
-                    </p>
-                  </div>
+              <div className="service-card">
+                <h3>Drawing and Spec Production</h3>
+                
+                <div className="service-item">
+                  <h4>Working Drawing Production</h4>
+                  <p>
+                    Outsource your labor-intensive production work to our curated network of production facilities in China. 
+                    We act as the single-source coordinator, so you do not deal with language and cultural barriers.
+                  </p>
+                </div>
+                
+                <div className="service-item">
+                  <h4>Building Products Research</h4>
+                  <p>
+                    We research building materials and generate Outline Specs. China offers an extensive catalog of unique 
+                    building products that can provide distinctive alternatives and cost savings.
+                  </p>
                 </div>
               </div>
               
-              {/* AI Contracts */}
-              <div>
-                <div className="service-card">
-                  <h3>AI-powered Contracts solution</h3>
-                  
-                  <div className="service-item">
-                    <h4>Contracts development, negotiation and risk management</h4>
-                    <p>
-                      The design industry faces inherent contractual risks due to fluid project scopes and complex deliverable definitions. 
-                      Most design professionals lack formal legal training, creating additional vulnerability.
-                    </p>
-                    <p style={{ marginTop: '1rem' }}>
-                      Through our partnership with{' '}
-                      <a href="https://www.docgility.com" style={{ color: '#2563eb', textDecoration: 'underline', fontWeight: '600' }} target="_blank" rel="noopener noreferrer">
-                        Docgility
-                      </a>
-                      {' '} - a leader in AI-driven contract management - we help you identify contractual risks and produce finalized agreements 
-                      with unprecedented speed and accuracy.
-                    </p>
-                  </div>
+              <div className="service-card">
+                <h3>AI-Powered Contracts Solution</h3>
+                
+                <div className="service-item">
+                  <h4>Contract Development & Risk Management</h4>
+                  <p>
+                    Through our partnership with{' '}
+                    <a href="https://www.docgility.com" style={{ color: '#E1B78C', textDecoration: 'underline' }} target="_blank" rel="noopener noreferrer">
+                      Docgility
+                    </a>
+                    {' '} - a leader in AI-driven contract management - we help identify contractual risks and produce 
+                    finalized agreements with unprecedented speed and accuracy.
+                  </p>
                 </div>
               </div>
             </div>
@@ -492,86 +743,62 @@ export default function Home() {
         </section>
 
         {/* Technical Capabilities */}
-        <section className="section gray">
+        <section className="capabilities-area">
           <div className="container">
-            <div className="section-title">
+            <div className="capabilities-title">
               <h2>Technical Capabilities</h2>
-              <div className="divider"></div>
             </div>
             
             <div className="capabilities-grid">
               <div className="capability-card">
-                <div className="capability-icon blue">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                  </svg>
-                </div>
+                <div className="capability-icon blue">🌐</div>
                 <h3>Language</h3>
-                <p>For regular communication, product research and drawings production: English only.</p>
+                <p>English communication for all regular operations and drawings production.</p>
               </div>
               
               <div className="capability-card">
-                <div className="capability-icon green">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
-                  </svg>
-                </div>
+                <div className="capability-icon green">🗣️</div>
                 <h3>Multi-language Support</h3>
-                <p>For work on contracts, our AI platform works in multiple languages. This is of particular importance for international projects.</p>
+                <p>AI platform works in multiple languages for international contract projects.</p>
               </div>
               
               <div className="capability-card">
-                <div className="capability-icon purple">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                  </svg>
-                </div>
-                <h3>Drawing platform</h3>
-                <p>Latest AutoCAD versions.</p>
+                <div className="capability-icon purple">📐</div>
+                <h3>Drawing Platform</h3>
+                <p>Latest AutoCAD versions for professional drawing production.</p>
               </div>
               
               <div className="capability-card">
-                <div className="capability-icon orange">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                  </svg>
-                </div>
-                <h3>AI platform</h3>
-                <p>Docgility's Virtual Collaboration Network (VCN).</p>
+                <div className="capability-icon orange">🤖</div>
+                <h3>AI Platform</h3>
+                <p>Docgility's Virtual Collaboration Network (VCN) for contract management.</p>
               </div>
               
               <div className="capability-card">
-                <div className="capability-icon red">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                </div>
-                <h3>Design standards</h3>
-                <p>American (MasterSpec, ASTM etc.) and European (EN, BS etc.)</p>
+                <div className="capability-icon red">✅</div>
+                <h3>Design Standards</h3>
+                <p>American (MasterSpec, ASTM) and European (EN, BS) standards compliance.</p>
               </div>
               
               <div className="capability-card">
-                <div className="capability-icon indigo">
-                  <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                  </svg>
-                </div>
+                <div className="capability-icon indigo">📍</div>
                 <h3>Locations</h3>
-                <p>Drawing production in Hong Kong and Shenzhen of China. Our AI partner is a Palo Alto company.</p>
+                <p>Production in Hong Kong and Shenzhen, AI partner in Palo Alto.</p>
               </div>
             </div>
           </div>
         </section>
 
         {/* Call to Action */}
-        <section className="cta">
+        <section className="cta-area">
           <div className="container">
-            <h2>Transform your practice efficiency while maintaining design excellence.</h2>
-            <p>To discover how our specialized services can optimize your project delivery and risk management,</p>
-            <Link href="/contact" className="cta-button">
-              CONTACT US
-            </Link>
+            <div className="cta-content">
+              <h2>Transform Your Practice Efficiency</h2>
+              <p>Discover how our specialized services can optimize your project delivery and risk management</p>
+              <Link href="/contact" className="cta-button">
+                Contact Us
+              </Link>
+            </div>
           </div>
         </section>
 

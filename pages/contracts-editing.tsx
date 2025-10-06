@@ -23,11 +23,11 @@ export default function ContractsEditing() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <div className="min-h-screen bg-primary">
+      <div className="min-h-screen">
         <Navigation />
 
         {/* Main Content with Burgundy Background */}
-        <div className="pt-24 pb-16 md:pt-32 md:pb-24">
+        <div className="pt-8 pb-16 md:pt-12 md:pb-24">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto space-y-12">
               

@@ -21,7 +21,7 @@ export default function About() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       
-      <div className="min-h-screen bg-background flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center pt-8">
         <div className="text-center">
           <p className="text-muted-foreground">Redirecting...</p>
         </div>

@@ -33,7 +33,7 @@ export default function DrawingsSpec() {
               <div className="bg-white rounded-lg p-8 md:p-12">
                 <h2 className="text-2xl font-bold mb-2">Working Drawing production</h2>
                 
-                <p className="text-xl leading-relaxed mb-6">
+                <p className="text-2xl leading-relaxed mb-6">
                   Outsource your labor-intensive production work to our curated network of production facilities in China. 
                   We act as the single-source coordinator, so you do not deal with language and cultural barriers. 
                   We deliver to you drawing packages that adhere to American (Imperial) or European (Metric) conventions. 
@@ -44,7 +44,7 @@ export default function DrawingsSpec() {
                 <div className="mb-8">
                   <h2 className="text-2xl font-bold mb-4">Building products research and spec</h2>
                   
-                  <p className="text-xl leading-relaxed">
+                  <p className="text-2xl leading-relaxed">
                     We research on building materials and then generate an Outline Spec based on the research. 
                     China offers an extensive catalog of unique building products that can provide your clients with 
                     distinctive alternatives and potential cost savings. We serve as your dedicated gateway to this valuable resource.

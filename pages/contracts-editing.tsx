@@ -44,7 +44,7 @@ export default function ContractsEditing() {
                   Contracts development, negotiation and risk management
                 </h2>
                 
-                <p className="text-lg leading-relaxed mb-6">
+                <p className="text-2xl leading-relaxed mb-6">
                   The design industry faces inherent contractual risks due to fluid project scopes and complex deliverable definitions. 
                   Most design professionals lack formal legal training, creating additional vulnerability. Through our partnership with{' '}
                   <a 

@@ -23,15 +23,13 @@ export default function Contact() {
               
               {/* Summary Section */}
               <div className="bg-white rounded-lg p-8 md:p-12">
-                <p className="text-lg leading-relaxed mb-6">
-                  While numerous architectural outsourcing companies exist, few combine deep expertise in architectural 
-                  detailing and specification with cutting-edge AI and legal contract management. In other words, we systematize 
-                  your technical operations so you can concentrate on creativity and client development.
+                <p className="text-2xl leading-relaxed mb-6">
+                While numerous architectural outsourcing companies exist, few combine deep expertise in architectural detailing and specification with cutting-edge AI-powered contract management. In other words, we systematize your technical/ legal operations so you can concentrate on creativity and client development.
                 </p>
 
                 {/* Technical Specifications */}
                 <div className="space-y-6 py-6 border-t">
-                  <h2 className="text-2xl font-bold">Technical Specifications</h2>
+                  <h2 className="text-2xl font-bold">Specifics</h2>
                   
                   <div className="space-y-4">
                     <div>
@@ -69,16 +67,15 @@ export default function Contact() {
 
                 {/* CTA */}
                 <div className="py-6 border-t">
-                  <p className="text-lg leading-relaxed mb-6">
-                    Transform your practice efficiency while maintaining design excellence. To discover how our specialized 
-                    services can optimize your project delivery and risk management, <strong>CONTACT US:</strong>
+                  <p className="text-2xl leading-relaxed mb-6">
+                  Our specialized services optimize your project delivery and contract management; thereby freeing you up for creative pursuits. Find out more.<strong>CONTACT US:</strong>
                   </p>
                 </div>
               </div>
 
               {/* Contact Information */}
               <div className="bg-white rounded-lg p-8 md:p-12">
-                <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
+                <h2 className="text-2xl font-bold mb-8">Contact</h2>
                 
                 <div className="grid md:grid-cols-2 gap-8">
                   {/* Email Section */}

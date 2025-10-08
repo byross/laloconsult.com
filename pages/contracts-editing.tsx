@@ -27,12 +27,12 @@ export default function ContractsEditing() {
         <Navigation />
 
         {/* Main Content with Burgundy Background */}
-        <div className="pt-8 pb-16 md:pt-12 md:pb-24">
+        <div className="pt-8 pb-0 md:pt-12 md:pb-0">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-12">
+            <div className="max-w-5xl mx-auto space-y-0">
               
               {/* Page Title */}
-              <div className="bg-white rounded-lg p-8 md:p-12">
+              <div className="bg-white rounded-lg px-8 pt-8 md:px-12 md:pt-12" style={{ paddingBottom: '0px' }}>
                 <h1 className="text-3xl md:text-4xl font-bold mb-2">
                   AI-powered Contracts solution
                 </h1>

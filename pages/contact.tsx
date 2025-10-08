@@ -17,9 +17,9 @@ export default function Contact() {
         <Navigation />
 
         {/* Main Content with Burgundy Background */}
-        <div className="pt-8 pb-16 md:pt-12 md:pb-24">
+        <div className="pt-8 pb-0 md:pt-12 md:pb-0">
           <div className="container mx-auto px-4">
-            <div className="max-w-5xl mx-auto space-y-12">
+            <div className="max-w-5xl mx-auto space-y-0">
               
               {/* Summary Section */}
               <div className="bg-white rounded-lg p-8 md:p-12">

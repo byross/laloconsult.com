@@ -18,7 +18,7 @@ export default function Home() {
         <Navigation />
 
         {/* Hero Section - Simple and Clean */}
-        <section className="pt-24 pb-20 md:pt-32 md:pb-32 bg-secondary">
+        <section className="pt-8 pb-0 md:pt-12 md:pb-0 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg p-8 md:p-12 space-y-6">

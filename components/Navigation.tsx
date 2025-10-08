@@ -27,7 +27,7 @@ export default function Navigation() {
       <div className="container mx-auto px-4 pt-4">
         <div className="flex items-start justify-between">
           {/* Logo */}
-          <Link href="/" className="text-4xl font-bold tracking-tight hover:opacity-80 transition-opacity text-white -mt-1">
+          <Link href="/" className="text-4xl font-bold tracking-tight hover:opacity-80 transition-opacity text-white -mt-1 ml-[50px]">
             LaLo Consult
           </Link>
           
@@ -37,9 +37,10 @@ export default function Navigation() {
               href="/" 
               className={`text-lg font-medium px-4 py-3 rounded-t-lg transition-all ${
                 isActive('/') 
-                  ? 'bg-white text-gray-900 -mb-px' 
+                  ? 'text-gray-900 -mb-px' 
                   : 'text-white/80 hover:text-white hover:bg-white/10 rounded-lg'
               }`}
+              style={isActive('/') ? { backgroundColor: '#DDEBEC' } : {}}
             >
               About us
             </Link>
@@ -47,9 +48,10 @@ export default function Navigation() {
               href="/drawings-spec" 
               className={`text-lg font-medium px-4 py-3 rounded-t-lg transition-all ${
                 isActive('/drawings-spec') 
-                  ? 'bg-white text-gray-900 -mb-px' 
+                  ? 'text-gray-900 -mb-px' 
                   : 'text-white/80 hover:text-white hover:bg-white/10 rounded-lg'
               }`}
+              style={isActive('/drawings-spec') ? { backgroundColor: '#DDEBEC' } : {}}
             >
               Drawings and Spec
             </Link>
@@ -57,9 +59,10 @@ export default function Navigation() {
               href="/contracts-editing" 
               className={`text-lg font-medium px-4 py-3 rounded-t-lg transition-all ${
                 isActive('/contracts-editing') 
-                  ? 'bg-white text-gray-900 -mb-px' 
+                  ? 'text-gray-900 -mb-px' 
                   : 'text-white/80 hover:text-white hover:bg-white/10 rounded-lg'
               }`}
+              style={isActive('/contracts-editing') ? { backgroundColor: '#DDEBEC' } : {}}
             >
               Contracts editing
             </Link>
@@ -67,9 +70,10 @@ export default function Navigation() {
               href="/contact" 
               className={`text-lg font-medium px-4 py-3 rounded-t-lg transition-all ${
                 isActive('/contact') 
-                  ? 'bg-white text-gray-900 -mb-px' 
+                  ? 'text-gray-900 -mb-px' 
                   : 'text-white/80 hover:text-white hover:bg-white/10 rounded-lg'
               }`}
+              style={isActive('/contact') ? { backgroundColor: '#DDEBEC' } : {}}
             >
               Contact us
             </Link>

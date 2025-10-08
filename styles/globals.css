@@ -33,7 +33,7 @@
 }
 
 body {
-  background-color: hsl(var(--color-background));
+  background-color: #DDEBEC;
   color: hsl(var(--color-foreground));
   font-family: 'Gantari', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   min-height: 100vh;

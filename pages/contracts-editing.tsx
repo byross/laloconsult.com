@@ -32,14 +32,14 @@ export default function ContractsEditing() {
             <div className="max-w-5xl mx-auto space-y-0">
               
               {/* Page Title */}
-              <div className="bg-white rounded-lg px-8 pt-8 md:px-12 md:pt-12" style={{ paddingBottom: '0px' }}>
+              <div className="rounded-lg px-8 pt-8 md:px-12 md:pt-12" style={{ paddingBottom: '0px' }}>
                 <h1 className="text-3xl md:text-4xl font-bold mb-2">
                   AI-powered Contracts solution
                 </h1>
               </div>
 
               {/* Contracts Development Section */}
-              <div className="bg-white rounded-lg p-8 md:p-12">
+              <div className="rounded-lg p-8 md:p-12">
                 <h2 className="text-2xl font-bold mb-6">
                   Contracts development, negotiation and risk management
                 </h2>
@@ -61,7 +61,7 @@ export default function ContractsEditing() {
 
                 {/* Docgility Platform Screenshot - Clickable to play video */}
                 <div className="mt-8 cursor-pointer group" onClick={handleVideoClick}>
-                  <div className="relative rounded-lg overflow-hidden aspect-video">
+                  <div className="relative overflow-hidden aspect-video border-2" style={{ borderColor: '#aaaaaa' }}>
                     <img 
                       src="/video/Docgility_cover.jpg" 
                       alt="Docgility Platform Preview" 
@@ -75,7 +75,7 @@ export default function ContractsEditing() {
                       </div>
                     </div>
                   </div>
-                  <p className="text-center text-sm text-muted-foreground mt-2">
+                  <p className="text-center text-lg text-muted-foreground mt-2">
                     Click to play demo video
                   </p>
                 </div>

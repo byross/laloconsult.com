@@ -21,7 +21,7 @@ export default function Home() {
         <section className="pt-8 pb-0 md:pt-12 md:pb-0 bg-secondary">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg p-8 md:p-12 space-y-6">
+              <div className="rounded-lg px-8 py-24 md:px-12 md:py-32 space-y-6">
                 <p className="text-2xl leading-relaxed text-foreground">
                   We are New York registered architects specializing in architectural detailing and specifications. 
                   We help architectural/ interior design firms worldwide in two aspects:
@@ -40,7 +40,7 @@ export default function Home() {
                 
                 <p className="text-2xl leading-relaxed text-foreground pt-4 border-t">
                   In other words, we are a just-in-time resource focusing on the non-creative aspect of your business, 
-                  freeing you to focus on innovative design and client relationships.
+                  freeing you to explore innovative design and to foster client relationships.
                 </p>
               </div>
             </div>

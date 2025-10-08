@@ -23,14 +23,14 @@ export default function DrawingsSpec() {
             <div className="max-w-5xl mx-auto space-y-0">
               
               {/* Page Title */}
-              <div className="bg-white rounded-lg px-8 pt-8 md:px-12 md:pt-12" style={{ paddingBottom: '0px' }}>
+              <div className="rounded-lg px-8 pt-8 md:px-12 md:pt-12" style={{ paddingBottom: '0px' }}>
                 <h1 className="text-3xl md:text-4xl font-bold mb-1">
                   Drawing and Spec production
                 </h1>
               </div>
 
               {/* Combined Working Drawing Production and Building Products Section */}
-              <div className="bg-white rounded-lg p-8 md:p-12">
+              <div className="rounded-lg p-8 md:p-12">
                 <h2 className="text-2xl font-bold mb-2">Working Drawing production</h2>
                 
                 <p className="text-2xl leading-relaxed mb-6">
@@ -55,14 +55,14 @@ export default function DrawingsSpec() {
                 <div className="space-y-4">
                   {/* Office Photos Row - 3:2 aspect ratio */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="aspect-[3/2] bg-gray-200 rounded-lg overflow-hidden border border-gray-300">
+                    <div className="aspect-[3/2] bg-gray-200 overflow-hidden border-2" style={{ borderColor: '#aaaaaa' }}>
                       <img 
                         src="/images/Office Photo 1.jpg" 
                         alt="Office environment in China" 
                         className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="aspect-[3/2] bg-gray-200 rounded-lg overflow-hidden border border-gray-300">
+                    <div className="aspect-[3/2] bg-gray-200 overflow-hidden border-2" style={{ borderColor: '#aaaaaa' }}>
                       <img 
                         src="/images/Office Photo 2.jpg" 
                         alt="Office workspace in China" 
@@ -73,14 +73,14 @@ export default function DrawingsSpec() {
                   
                   {/* Technical Photos Row - All with same aspect ratio and borders */}
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="aspect-[3/2] bg-gray-200 rounded-lg overflow-hidden border border-gray-300">
+                    <div className="aspect-[3/2] bg-gray-200 overflow-hidden border-2" style={{ borderColor: '#aaaaaa' }}>
                       <img 
                         src="/images/Technical Drawing 1.jpg" 
                         alt="Technical drawing example" 
                         className="w-full h-full object-contain"
                       />
                     </div>
-                    <div className="aspect-[3/2] bg-gray-200 rounded-lg overflow-hidden border-t-2 border-b-2 border-gray-400">
+                    <div className="aspect-[3/2] bg-gray-200 overflow-hidden border-2" style={{ borderColor: '#aaaaaa' }}>
                       <img 
                         src="/images/Product Catalog.jpg" 
                         alt="Building products catalog interface" 
